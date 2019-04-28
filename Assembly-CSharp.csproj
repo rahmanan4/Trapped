@@ -69,6 +69,13 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyAnimator.cs" />
     <Compile Include="Assets\Scripts\Enemy Scripts\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Helper Scripts\TagHolder.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\ActionItems\ActionItem.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\ActionItems\SceneChange.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\DialogueSystem.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\PickupItem.cs" />
+    <Compile Include="Assets\Scripts\Item Scripts\WorldInteraction.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerAttack.cs" />

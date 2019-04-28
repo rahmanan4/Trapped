@@ -1,16 +1,14 @@
 ﻿<Properties StartupConfiguration="{34A3CA65-2CDB-6DCB-744D-BDA9323EC838}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Player Scripts/HealthScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Helper Scripts/TagHolder.cs">
     <Files>
-      <File FileName="Assets/Scripts/Enemy Scripts/EnemyAnimator.cs" Line="27" Column="6" />
-      <File FileName="Assets/Scripts/Enemy Scripts/EnemyController.cs" Line="67" Column="1" />
-      <File FileName="Assets/Scripts/Player Scripts/HealthScript.cs" Line="39" Column="54" />
-      <File FileName="Assets/Scripts/Player Scripts/PlayerStats.cs" Line="10" Column="1" />
-      <File FileName="Assets/Scripts/Player Scripts/PlayerSprintAndCrouch.cs" Line="116" Column="10" />
+      <File FileName="Assets/Scripts/Helper Scripts/TagHolder.cs" Line="2" Column="31" />
+      <File FileName="Assets/Scripts/Player Scripts/PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player Scripts/HealthScript.cs" Line="62" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7a1abcbf-44d6-4995-8f5d-c86874de1f02" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1609730-c5a9-4919-94e0-3bee2ee5b42c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

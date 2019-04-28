@@ -8,6 +8,8 @@ TagManager:
   - Crosshair
   - Look Root
   - FP Camera
+  - Interactable Object
+  - NPC
   layers:
   - Default
   - TransparentFX

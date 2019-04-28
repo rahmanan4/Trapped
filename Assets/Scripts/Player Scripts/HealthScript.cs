@@ -7,7 +7,8 @@ public class HealthScript : MonoBehaviour
 {
     private NavMeshAgent navAgent;
 
-    public float health = 100f;
+    public float health = 0f;
+    public float anxiety = 5f;
 
     public bool is_Player;
 
@@ -24,14 +25,20 @@ public class HealthScript : MonoBehaviour
         }
     }
 
-    public void ApplyDamage(float damage)
+    void Update()
+    {
+        if (health <= 100f)
+        {
+            ApplyAnxiety();
+        }
+    }
+
+    public void ApplyAnxiety()
     {
         if (is_Dead)
         {
             return;
         }
-
-        health -= damage;
 
         if (is_Player)
         {
@@ -39,10 +46,18 @@ public class HealthScript : MonoBehaviour
             player_Stats.Display_HealthStats(health);
         }
 
-        if (health <= 0f)
+        if (health >= 100f)
         {
             PlayerDied();
             is_Dead = true;
+        }
+        else
+        {
+            if (health < 100f)
+            {
+                health += (anxiety / 2f) * Time.deltaTime;
+                player_Stats.Display_HealthStats(health);
+            }
         }
     }
 
@@ -51,16 +66,16 @@ public class HealthScript : MonoBehaviour
         if (is_Player)
         {
             // all npcs in the game
-            GameObject[] enemies = GameObject.FindGameObjectsWithTag(Tags.ENEMY_TAG);
-            for (int i = 0; i < enemies.Length; i++)
+            GameObject[] npcs = GameObject.FindGameObjectsWithTag("Interactable Object");
+            for (int i = 0; i < npcs.Length; i++)
             {
-                enemies[i].GetComponent<EnemyController>().enabled = false;
+                npcs[i].GetComponent<EnemyController>().enabled = false;
             }
 
             // simulates player has died
             GetComponent<PlayerMovement>().enabled = false;
             GetComponent<PlayerAttack>().enabled = false;
-            GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
+            //GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
         }
 
         if(tag == Tags.PLAYER_TAG)
