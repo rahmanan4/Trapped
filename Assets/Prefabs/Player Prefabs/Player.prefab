@@ -276,7 +276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d52d5b3ff740402f926f6b35c21c339, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 0
+  anxiety: 5
   is_Player: 1
 --- !u!114 &1643833631
 MonoBehaviour:
@@ -715,10 +716,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 9500000, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 27a6794f7675e4fbbbecbb664f3a62d7, type: 2}
     - target: {fileID: 400014, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -763,6 +760,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27a6794f7675e4fbbbecbb664f3a62d7, type: 2}
     - target: {fileID: 13700002, guid: ded3362b8b3b82243b3043bb355c770c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

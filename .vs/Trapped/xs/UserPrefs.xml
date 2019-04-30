@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{34A3CA65-2CDB-6DCB-744D-BDA9323EC838}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Helper Scripts/TagHolder.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelControl Scripts/LevelControlScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/Helper Scripts/TagHolder.cs" Line="2" Column="31" />
-      <File FileName="Assets/Scripts/Player Scripts/PlayerMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Player Scripts/HealthScript.cs" Line="62" Column="6" />
+      <File FileName="Assets/Scripts/Item Scripts/ActionItems/SceneChange.cs" Line="11" Column="17" />
+      <File FileName="Assets/Scripts/Item Scripts/NPC.cs" Line="6" Column="32" />
+      <File FileName="Assets/Scripts/Item Scripts/DialogueSystem.cs" Line="11" Column="36" />
+      <File FileName="Assets/Scripts/LevelControl Scripts/LevelControlScript.cs" Line="6" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b1609730-c5a9-4919-94e0-3bee2ee5b42c" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d1e36024-c75d-40f2-b9d1-ffbec96b4c45" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

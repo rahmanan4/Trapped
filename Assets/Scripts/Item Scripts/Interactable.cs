@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
     private NavMeshAgent playerAgent;
     private bool hasInteracted;
+    private string name;
 
     void Update()
     {

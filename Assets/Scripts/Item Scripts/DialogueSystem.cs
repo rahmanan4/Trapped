@@ -15,7 +15,7 @@ public class DialogueSystem : MonoBehaviour
     Button continueButton;
     Text dialogueText, nameText;
     int dialogueIndex;
-    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -27,7 +27,7 @@ public class DialogueSystem : MonoBehaviour
         continueButton.onClick.AddListener(delegate { ContinueDialogue(); });
         dialoguePanel.SetActive(false);
 
-        if(Instance != null && Instance != this)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
         }
@@ -39,7 +39,7 @@ public class DialogueSystem : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if (Input.GetKeyDown(KeyCode.Tab))
         {
             ContinueDialogue();
         }
@@ -49,7 +49,7 @@ public class DialogueSystem : MonoBehaviour
     {
         dialogueIndex = 0;
         dialogueLines = new List<string>();
-        foreach(string line in lines)
+        foreach (string line in lines)
         {
             dialogueLines.Add(line);
         }
@@ -68,7 +68,7 @@ public class DialogueSystem : MonoBehaviour
 
     public void ContinueDialogue()
     {
-        if(dialogueIndex < dialogueLines.Count-1)
+        if (dialogueIndex < dialogueLines.Count - 1)
         {
             dialogueIndex++;
             dialogueText.text = dialogueLines[dialogueIndex];

@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\Item Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\PickupItem.cs" />
     <Compile Include="Assets\Scripts\Item Scripts\WorldInteraction.cs" />
+    <Compile Include="Assets\Scripts\LevelControl Scripts\LevelControlScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\HealthScript.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\MouseLook.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerAttack.cs" />

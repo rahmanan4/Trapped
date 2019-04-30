@@ -1,12 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SceneChange : ActionItem
+public class SceneChange : MonoBehaviour
 {
-    public override void Interact()
+    public GameObject enterText;
+    public string levelToLoad;
+
+    void Start()
     {
-        // Put in scene change code here
-        
+        enterText.SetActive(false);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            enterText.SetActive(true);
+            if(Input.GetButtonDown("Interact"))
+            {
+                SceneManager.LoadScene(levelToLoad);
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            enterText.SetActive(false);
+        }
     }
 }
