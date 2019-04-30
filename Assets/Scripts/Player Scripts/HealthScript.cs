@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class HealthScript : MonoBehaviour
     private bool is_Dead;
 
     private PlayerStats player_Stats;
+
+    private string central_Reroute;
 
     // Start is called before the first frame update
     void Awake()
@@ -35,11 +38,12 @@ public class HealthScript : MonoBehaviour
 
     public void ApplyAnxiety()
     {
+        /*
         if (is_Dead)
         {
             return;
         }
-
+        */
         if (is_Player)
         {
             //displays the anxiety bar
@@ -50,14 +54,12 @@ public class HealthScript : MonoBehaviour
         {
             PlayerDied();
             is_Dead = true;
+            RestartGame();
         }
-        else
+        if (health < 100f)
         {
-            if (health < 100f)
-            {
-                health += (anxiety / 2f) * Time.deltaTime;
-                player_Stats.Display_HealthStats(health);
-            }
+            health += (anxiety / 2f) * Time.deltaTime;
+            player_Stats.Display_HealthStats(health);
         }
     }
 
@@ -70,23 +72,27 @@ public class HealthScript : MonoBehaviour
             for (int i = 0; i < npcs.Length; i++)
             {
                 npcs[i].GetComponent<EnemyController>().enabled = false;
+                //npcs[i].SetActive(false);
             }
 
             // simulates player has died
             GetComponent<PlayerMovement>().enabled = false;
-            GetComponent<PlayerAttack>().enabled = false;
-            //GetComponent<WeaponManager>().GetCurrentSelectedWeapon().gameObject.SetActive(false);
         }
 
         if(tag == Tags.PLAYER_TAG)
         {
             Invoke("RestartGame", 3f);
         }
+
+        else
+        {
+            Invoke("TurnOffGameObject", 3f);
+        }
     }
 
     void RestartGame()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Hub");
+        SceneManager.LoadScene(central_Reroute);
     }
 
     void TurnOffGameObject()

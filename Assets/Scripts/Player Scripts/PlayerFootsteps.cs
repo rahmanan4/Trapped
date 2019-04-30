@@ -50,7 +50,7 @@ public class PlayerFootsteps : MonoBehaviour
             // if the distance the player has travelled is more than the step distance, then play footstep sound clips
             if(accumulated_Distance > step_Distance)
             {
-                footstep_Sound.volume = Random.Range(volume_Min, volume_Max);
+                footstep_Sound.volume = volume_Min;
                 footstep_Sound.clip = footstep_Clip[Random.Range(0, footstep_Clip.Length)];
                 footstep_Sound.Play();
 
